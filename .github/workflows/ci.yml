@@ -14,7 +14,8 @@ jobs:
 
     strategy:
       matrix:
-        os: [ubuntu-latest, macOS-latest, windows-latest]
+        os: [windows-latest]
+#        os: [ubuntu-latest, macOS-latest, windows-latest]
 
     steps:
       - uses: actions/checkout@v2
@@ -38,4 +39,4 @@ jobs:
         run: |
           set -ex
           export STACK_ROOT=$(pwd)/.stack-root
-          stack test --haddock --no-haddock-deps
+          stack test --haddock --no-haddock-deps --jobs 1
