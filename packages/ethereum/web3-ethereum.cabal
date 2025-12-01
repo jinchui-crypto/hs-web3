@@ -1,6 +1,6 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.37.0.
+-- This file has been generated from package.yaml by hpack version 0.38.1.
 --
 -- see: https://github.com/sol/hpack
 
@@ -45,9 +45,6 @@ library
       Network.Ethereum.Contract.Event.SingleFilter
       Network.Ethereum.Contract.Method
       Network.Ethereum.Contract.TH
-      Network.Ethereum.Ens
-      Network.Ethereum.Ens.PublicResolver
-      Network.Ethereum.Ens.Registry
       Network.Ethereum.Transaction
       Network.Ethereum.Unit
   other-modules:
@@ -110,9 +107,6 @@ test-suite tests
       Network.Ethereum.Contract.Event.SingleFilter
       Network.Ethereum.Contract.Method
       Network.Ethereum.Contract.TH
-      Network.Ethereum.Ens
-      Network.Ethereum.Ens.PublicResolver
-      Network.Ethereum.Ens.Registry
       Network.Ethereum.Transaction
       Network.Ethereum.Unit
       Paths_web3_ethereum

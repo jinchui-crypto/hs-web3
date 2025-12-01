@@ -1,0 +1,48 @@
+name:                web3-ethereum-ens
+version:             1.0.1.0
+synopsis:            Ethereum ENS support for Haskell Web3 library.
+description:         ENS resolver support for Web3 library.
+github:              "airalab/hs-web3"
+license:             Apache-2.0
+license-file:        LICENSE
+author:              Aleksandr Krupenkin
+maintainer:          mail@akru.me
+copyright:           "(c) Aleksandr Krupenkin 2016-2024"
+category:            Network
+
+dependencies:
+- base                 >4.11 && <4.19
+- memory               >0.14 && <0.19
+- microlens            >0.4  && <0.5
+- bytestring           >0.10 && <0.12
+- web3-crypto          >=1.0 && <1.1
+- web3-ethereum        >=1.0 && <1.1
+- web3-solidity        >=1.0 && <1.1
+- jsonrpc-tinyclient   >=1.0 && <1.1
+
+ghc-options:
+- -funbox-strict-fields
+- -Wduplicate-exports
+- -Widentities
+- -Woverlapping-patterns
+- -Wpartial-type-signatures
+- -Wunrecognised-pragmas
+- -Wtyped-holes
+- -Wincomplete-patterns
+- -Wincomplete-uni-patterns
+- -Wmissing-fields
+- -Wmissing-methods
+- -Wmissing-exported-signatures
+- -Wmissing-signatures
+- -Wname-shadowing
+- -Wunused-binds
+- -Wunused-top-binds
+- -Wunused-local-binds
+- -Wunused-pattern-binds
+- -Wunused-imports
+- -Wunused-matches
+- -Wunused-foralls
+- -Wtabs
+
+library:
+  source-dirs: src

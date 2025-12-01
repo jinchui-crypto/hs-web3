@@ -11,6 +11,7 @@ packages:
 - 'packages/provider'
 - 'packages/solidity'
 - 'packages/ethereum'
+- 'packages/ethereum-ens'
 - 'packages/polkadot'
 - 'packages/hexstring'
 - 'examples/erc20'
@@ -29,3 +30,7 @@ nix:
     - haskellPackages.stylish-haskell
     - haskellPackages.hlint
     - zlib
+
+ghc-options:
+  # Apply this flag to all local packages
+  "$locals": -fexternal-interpreter
