@@ -30,7 +30,3 @@ nix:
     - haskellPackages.stylish-haskell
     - haskellPackages.hlint
     - zlib
-
-ghc-options:
-  # Apply this flag to all local packages
-  "$locals": -fexternal-interpreter

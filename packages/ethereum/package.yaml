@@ -77,3 +77,6 @@ tests:
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
+    when:
+    - condition: os(windows)
+      ghc-options: -fexternal-interpreter
