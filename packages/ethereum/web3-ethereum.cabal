@@ -143,5 +143,3 @@ test-suite tests
     , web3-crypto ==1.0.*
     , web3-solidity ==1.0.*
   default-language: Haskell2010
-  if os(windows)
-    ghc-options: -fexternal-interpreter

@@ -30,3 +30,7 @@ nix:
     - haskellPackages.stylish-haskell
     - haskellPackages.hlint
     - zlib
+
+flags:
+  bitvec:
+    simd: false
