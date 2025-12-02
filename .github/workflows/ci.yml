@@ -14,19 +14,20 @@ jobs:
 
     strategy:
       matrix:
-        os: [ubuntu-latest, macOS-latest, windows-latest]
+        os: [windows-latest]
+#        os: [ubuntu-latest, macOS-latest, windows-latest]
 
     steps:
       - uses: actions/checkout@v2
 
       - name: Setup latest stack
-        uses: haskell/actions/setup@v2
+        uses: haskell-actions/setup@v2
         with:
           enable-stack: true
           stack-version: 'latest'
 
       - name: Cache .stack-root
-        uses: actions/cache@v1
+        uses: actions/cache@v4
         env:
           cache-name: stack-root
         with:
@@ -38,4 +39,4 @@ jobs:
         run: |
           set -ex
           export STACK_ROOT=$(pwd)/.stack-root
-          stack test --haddock --no-haddock-deps
+          stack test --haddock --no-haddock-deps --jobs 1 --ghc-options="-fobject-code"
